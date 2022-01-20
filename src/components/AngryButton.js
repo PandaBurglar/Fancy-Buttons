@@ -6,7 +6,7 @@ import { useState } from "react";
   2. as a condition that will determine which message is displayed. 
 */
 function AngryButton(props){
-  const [anger, setAnger] = useState();
+  const [anger, setAnger] = useState(0);
   return (
     <button style={{backgroundColor: `rgba(255,0,0,${anger})` }} className="AngryButton">
         {anger < 1 && <span>Don't click me too much! </span>}
