@@ -7,9 +7,9 @@ Add conditional rendering to the the potential message of the button (light bein
 */
 
 function LightSwitchButton(props){
-  const [light, setLight] = useState("off");
-  /* condition ? exprIfTrue : exprIfFalse */
-  const handleClick = () => setLight(light === "on" ? "off" : "on");
+  const {light, switchLight} = props;
+  const handleClick = () => switchLight();
+  
   return (
     <button onClick={handleClick} className="LightSwitchButton">
       {light === "on" && <span className="on"><i>💡</i> I'm on!</span>}
